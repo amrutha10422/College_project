@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// principal page
+
+/* Principal pages */
 import PrincipalDashboard from "./Principal/pages/PrincipalDashboard";
 import Messages from "./Principal/pages/messages";
 import Departments from "./Principal/pages/departments";
@@ -10,39 +11,43 @@ import StudentAffairs from "./Principal/pages/StudentAffairs";
 import ReportsAnalytics from "./Principal/pages/ReportsAnalytics";
 import AcademicPlanning from "./Principal/pages/AcademicPlanning";
 import ApprovalCenter from "./Principal/pages/ApprovalCenter";
-import ADministration from "./Principal/pages/Administration";
+import Administration from "./Principal/pages/Administration";
 import Notifications from "./Principal/pages/Notifications";
 import Rollpage from "./Principal/pages/rolepage";
 import AdminLogin from "./Principal/pages/Principallogin";
 
-// hod page
+/* HOD pages */
 import HODLogin from "./HOD/pages/HODlogin";
 import HODDashboard from "./HOD/pages/HODDashboard";
 import HODFaculty from "./HOD/pages/HODfaculty";
 import HODTimetable from "./HOD/pages/HODTimetable";
 import HODNotification from "./HOD/pages/HODNotification";
-// faculty pages
-import Facultylogin from "./Faculty/pages/FacultyLogin";
+
+/* Faculty pages */
+import FacultyLogin from "./Faculty/pages/FacultyLogin";
 import FacultyDashboard from "./Faculty/pages/Facultydashboard";
 import FacultyTimetable from "./Faculty/pages/Facultytimetable";
 import FacultyHours from "./Faculty/pages/Facultyhours";
-import FacultyNotificatins from "./Faculty/pages/Facultynotification";
+import FacultyNotifications from "./Faculty/pages/Facultynotification";
 import FacultyPlanner from "./Faculty/pages/Facultyplanner";
 import FacultyMessage from "./Faculty/pages/Facultymessage";
-import FacultyReg from "./Faculty/pages/Facultyregistration";
+import FacultyRegistration from "./Faculty/pages/Facultyregistration";
 
-// student page
+/* Student pages */
 import StudentLogin from "./Student/pages/studentLogin";
-
-
+import StudentDashboard from "./Student/pages/studentdashboard";
+import StudentDetails from "./Student/pages/studentdetails";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+
+        {/* Home */}
         <Route path="/" element={<Rollpage />} />
+
+        {/* Principal */}
         <Route path="/admin-login" element={<AdminLogin />} />
-        {/* Main Principal dashboard */}
         <Route path="/principal" element={<PrincipalDashboard />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/departments" element={<Departments />} />
@@ -52,25 +57,31 @@ const App = () => {
         <Route path="/academic-planning" element={<AcademicPlanning />} />
         <Route path="/reports-analytics" element={<ReportsAnalytics />} />
         <Route path="/approval-center" element={<ApprovalCenter />} />
-        <Route path="/administration" element={<ADministration />} />
+        <Route path="/administration" element={<Administration />} />
         <Route path="/notifications" element={<Notifications />} />
-        {/* HOD PAGES */}
+
+        {/* HOD */}
         <Route path="/hod" element={<HODLogin />} />
         <Route path="/dashboard/hod" element={<HODDashboard />} />
         <Route path="/faculty/hod" element={<HODFaculty />} />
         <Route path="/timetable/hod" element={<HODTimetable />} />
         <Route path="/notifications/hod" element={<HODNotification />} />
-          {/* Faulty pages */}
-        <Route path="/faculty" element={<Facultylogin />} /> 
+
+        {/* Faculty */}
+        <Route path="/faculty" element={<FacultyLogin />} />
         <Route path="/dashboard/faculty" element={<FacultyDashboard />} />
         <Route path="/timetable/faculty" element={<FacultyTimetable />} />
-        <Route path="/hours/faculty" element={<FacultyHours />} />  
-        <Route path="/notifications/faculty" element={<FacultyNotificatins />} /> 
+        <Route path="/hours/faculty" element={<FacultyHours />} />
+        <Route path="/notifications/faculty" element={<FacultyNotifications />} />
         <Route path="/planner/faculty" element={<FacultyPlanner />} />
         <Route path="/messages/faculty" element={<FacultyMessage />} />
-        <Route path="/register/faculty" element={<FacultyReg />} />
-        {/* student PAGES */}
+        <Route path="/register/faculty" element={<FacultyRegistration />} />
+
+        {/* Student */}
         <Route path="/student/login" element={<StudentLogin />} />
+        <Route path="/student/dashboard" element={<StudentDashboard />} />
+        <Route path="/student/details" element={<StudentDetails />} />
+
       </Routes>
     </BrowserRouter>
   );

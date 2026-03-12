@@ -26,54 +26,47 @@ const StudentLogin = () => {
     generateCaptcha();
   }, []);
 
+  // ✅ FIXED: was navigate("/") before — now goes to dashboard
   const handleLogin = (e) => {
     e.preventDefault();
     setError("");
 
-    if (captcha !== generatedCaptcha) {
-      setError("Invalid captcha code");
-      generateCaptcha();
+    if (!userId || !password) {
+      setError("Please enter your credentials");
       return;
     }
 
-    if (userId === "hod123" && password === "password123") {
-      alert("Login successful");
-      navigate("/");
-    } else {
-      setError("Invalid credentials");
+    if (captcha !== generatedCaptcha) {
+      setError("Invalid captcha code");
+      generateCaptcha();
+      setCaptcha("");
+      return;
     }
+
+    navigate("/student/dashboard");
+   // ✅ THIS IS THE KEY FIX
   };
 
   return (
     <div className="min-h-screen bg-[#eaf7f5] flex flex-col items-center text-[14px]">
-      {/* BACK BUTTON */}
       <div className="absolute top-4 left-4">
         <button
           onClick={() => navigate(-1)}
           className="flex items-center gap-2 text-sm text-gray-600 hover:text-black"
         >
-        <ArrowLeft size={16} />
-          Back
+          <ArrowLeft size={16} /> Back
         </button>
       </div>
 
-      {/* TOP GREEN PANEL */}
-      <div className="w-full max-w-md bg-linear-to-r from-blue-600 to-purple-600 text-white flex flex-col items-center py-10 mt-8 rounded-t-3xl shadow-md">
-
+      <div className="w-full max-w-md bg-gradient-to-r from-blue-600 to-purple-600 text-white flex flex-col items-center py-10 mt-8 rounded-t-3xl shadow-md">
         <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-3">
           🏛️
         </div>
-
-        <h1 className="text-[18px] font-semibold">Student portsl</h1>
-        <p className="text-sm opacity-90">
-          Acadamic Access Login
-        </p>
+        <h1 className="text-[18px] font-semibold">Student Portal</h1>
+        <p className="text-sm opacity-90">Academic Access Login</p>
       </div>
 
-      {/* LOGIN CARD */}
       <div className="bg-white w-full max-w-md rounded-b-2xl shadow-lg p-6">
-
-        {/* Demo Toggle */}
         <button
           onClick={() => setShowDemo(!showDemo)}
           className="w-full border border-green-200 text-green-700 bg-green-50 py-3 rounded-xl text-sm mb-5 hover:bg-green-100 transition"
@@ -83,14 +76,13 @@ const StudentLogin = () => {
 
         {showDemo && (
           <div className="bg-green-50 border border-green-200 rounded-lg p-3 text-sm mb-4">
-            <p>User ID: <b>hod123</b></p>
-            <p>Password: <b>password123</b></p>
+            <p>User ID: <b>any value</b></p>
+            <p>Password: <b>any value</b></p>
+            <p className="text-xs text-gray-400 mt-1">Just fill all fields + captcha</p>
           </div>
         )}
 
         <form onSubmit={handleLogin} className="space-y-4">
-
-          {/* USER ID */}
           <div>
             <label className="text-gray-700 text-sm">User ID</label>
             <input
@@ -103,7 +95,6 @@ const StudentLogin = () => {
             />
           </div>
 
-          {/* PASSWORD */}
           <div>
             <label className="text-gray-700 text-sm">Password</label>
             <div className="relative">
@@ -124,24 +115,18 @@ const StudentLogin = () => {
             </div>
           </div>
 
-          {/* CAPTCHA */}
           <div>
-            <label className="text-gray-700 text-sm">
-              Security Verification
-            </label>
-
+            <label className="text-gray-700 text-sm">Security Verification</label>
             <div className="flex items-center gap-2 mt-2">
-              <div className="flex-1 border rounded-lg px-4 py-2 bg-gray-50 text-center text-lg tracking-widest font-semibold">
+              <div className="flex-1 border rounded-lg px-4 py-2 bg-gray-50 text-center text-lg tracking-widest font-semibold select-none">
                 {generatedCaptcha}
               </div>
-
               <RefreshCw
                 size={20}
                 className="cursor-pointer text-gray-600"
                 onClick={generateCaptcha}
               />
             </div>
-
             <input
               type="text"
               placeholder="Enter the code above"
@@ -152,22 +137,16 @@ const StudentLogin = () => {
             />
           </div>
 
-          {error && (
-            <p className="text-red-500 text-xs">{error}</p>
-          )}
+          {error && <p className="text-red-500 text-xs">{error}</p>}
 
-          {/* BUTTON */}
           <button
             type="submit"
-            className="w-full bg-linear-to-r from-blue-600 to-purple-600 text-white py-2.5 rounded-xl font-medium hover:opacity-90 transition mb-6"
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2.5 rounded-xl font-medium hover:opacity-90 transition mb-6"
           >
             Sign In
           </button>
         </form>
       </div>
-
-      
-
       <div className="h-10" />
     </div>
   );
