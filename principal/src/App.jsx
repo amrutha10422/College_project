@@ -37,6 +37,7 @@ import FacultyRegistration from "./Faculty/pages/Facultyregistration";
 import StudentLogin from "./Student/pages/studentLogin";
 import StudentDashboard from "./Student/pages/studentdashboard";
 import StudentDetails from "./Student/pages/studentdetails";
+import StudentSyllabus from "./Student/pages/studentsyllabus";
 
 const App = () => {
   return (
@@ -81,6 +82,7 @@ const App = () => {
         <Route path="/student/login" element={<StudentLogin />} />
         <Route path="/student/dashboard" element={<StudentDashboard />} />
         <Route path="/student/details" element={<StudentDetails />} />
+        <Route path="/student/syllabus" element={<StudentSyllabus />} />
 
       </Routes>
     </BrowserRouter>
