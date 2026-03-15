@@ -54,7 +54,7 @@ export default function StudentDetails() {
         <div style={{ display:"flex", alignItems:"center", gap:"12px" }}>
           {/* ✅ Back button goes to dashboard via router */}
           <button
-            onClick={() => navigate("/student/dashboard")}
+            onClick={() => navigate(-1)}
             style={{ display:"flex", alignItems:"center", gap:"5px", background:"none", border:"none", cursor:"pointer", color:"#6b7280", fontSize:"12.5px", fontWeight:500, padding:0 }}>
             {I.back()} Back to Dashboard
           </button>

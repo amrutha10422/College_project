@@ -58,7 +58,7 @@ const StudentLogin = () => {
         </button>
       </div>
 
-      <div className="w-full max-w-md bg-gradient-to-r from-blue-600 to-purple-600 text-white flex flex-col items-center py-10 mt-8 rounded-t-3xl shadow-md">
+      <div className="w-full max-w-md bg-linear-to-r from-blue-600 to-purple-600 text-white flex flex-col items-center py-10 mt-8 rounded-t-3xl shadow-md">
         <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-3">
           🏛️
         </div>
@@ -141,7 +141,7 @@ const StudentLogin = () => {
 
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2.5 rounded-xl font-medium hover:opacity-90 transition mb-6"
+            className="w-full bg-linear-to-r from-blue-600 to-purple-600 text-white py-2.5 rounded-xl font-medium hover:opacity-90 transition mb-6"
           >
             Sign In
           </button>
