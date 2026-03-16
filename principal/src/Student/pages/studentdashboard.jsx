@@ -19,21 +19,10 @@ const CARDS = [
   { icon:"🕐", bg:"#a855f7", label:"Attendance",      sub:"Track your class attendance",      badge:"88.5%",        bc:{color:"#7c3aed",background:"#f5f3ff"}, nav:"/student/attendance" },
   { icon:"⏰", bg:"#14b8a6", label:"Timetable",       sub:"View your class schedule",         badge:"Today",        bc:{color:"#0f766e",background:"#f0fdfa"}, nav:"/student/timetable" },
   { icon:"📚", bg:"#f97316", label:"Syllabus",        sub:"Current semester syllabus",        badge:"26 Credits",   bc:{color:"#c2410c",background:"#fff7ed"}, nav:"/student/syllabus" },
-  { icon:"💳", bg:"#ef4444", label:"Fee Management",  sub:"Payment & due status",             badge:"₹25,000 Due",  bc:{color:"#dc2626",background:"#fef2f2"} },
-  { icon:"👥", bg:"#6366f1", label:"Committees",      sub:"Join college committees",          badge:"27 Available", bc:{color:"#4338ca",background:"#eef2ff"} },
-  { icon:"👤", bg:"#3b82f6", label:"Student Details", sub:"Personal & academic information", badge:"Profile", bc:{color:"#2563eb",background:"#eff6ff"}, nav:"/student/details" },
+  { icon:"💳", bg:"#ef4444", label:"Fee Management",  sub:"Payment & due status",             badge:"₹25,000 Due",  bc:{color:"#dc2626",background:"#fef2f2"}, nav:"/student/FeeManagement" },
+  { icon:"👥", bg:"#6366f1", label:"Committees",      sub:"Join college committees",          badge:"27 Available", bc:{color:"#4338ca",background:"#eef2ff"}, nav:"/student/Committees" },
+  
 
-  { icon:"📋", bg:"#22c55e", label:"Exams", sub:"Schedules, results & upcoming", badge:"2 upcoming", bc:{color:"#16a34a",background:"#f0fdf4"} },
-
-  { icon:"🕐", bg:"#a855f7", label:"Attendance", sub:"Track your class attendance", badge:"88.5%", bc:{color:"#7c3aed",background:"#f5f3ff"} },
-
-  { icon:"⏰", bg:"#14b8a6", label:"Timetable", sub:"View your class schedule", badge:"Today", bc:{color:"#0f766e",background:"#f0fdfa"} },
-
-  { icon:"📚", bg:"#f97316", label:"Syllabus", sub:"Current semester syllabus", badge:"26 Credits", bc:{color:"#c2410c",background:"#fff7ed"}, nav:"/student/syllabus" },
-
-  { icon:"💳", bg:"#ef4444", label:"Fee Management", sub:"Payment & due status", badge:"₹25,000 Due", bc:{color:"#dc2626",background:"#fef2f2"} },
-
-  { icon:"👥", bg:"#6366f1", label:"Committees", sub:"Join college committees", badge:"27 Available", bc:{color:"#4338ca",background:"#eef2ff"} },
 ];
 
 const STATS = [
