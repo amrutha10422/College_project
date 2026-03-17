@@ -135,7 +135,7 @@ const Departments = () => {
 
         {/* Top Banner */}
         <div className="bg-[#f3f7ff] rounded-xl py-6 mb-5 flex flex-col items-center justify-center border border-[#eef2ff]">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center shadow-sm mb-3">
+          <div className="w-12 h-12 rounded-xl bg-linear-to-r from-indigo-500 to-purple-500 flex items-center justify-center shadow-sm mb-3">
             <GraduationCap size={22} color="white" />
           </div>
           <p className="text-sm font-medium text-gray-800">Academic Departments</p>
@@ -159,13 +159,13 @@ const Departments = () => {
                 }`}
               >
                 {/* Gradient top border */}
-                <div className={`h-1 bg-gradient-to-r ${dept.border}`} />
+                <div className={`h-1 bg-linear-to-r ${dept.border}`} />
 
                 <div className="p-5">
                   {/* Top Row */}
                   <div className="flex justify-between items-start">
                     <div className="flex gap-3 flex-1">
-                      <div className={`${dept.iconBg} w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0`}>
+                      <div className={`${dept.iconBg} w-10 h-10 rounded-lg flex items-center justify-center shrink-0`}>
                         <Icon size={18} className={dept.iconColor} />
                       </div>
                       <div className="flex-1">

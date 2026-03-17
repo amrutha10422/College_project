@@ -108,7 +108,7 @@ const mgmtCards = [
     desc:"View and manage department faculty members",
     sub:"Faculty profiles, schedules, and assignments",
     badge:"12 Members",
-    onClick: null,
+    onClick: () => navigate("/department/bca/faculty"),
   },
   {
     icon:StudentIcon,
@@ -135,7 +135,7 @@ const mgmtCards = [
     desc:"Course curriculum and academic content",
     sub:"Course outlines, modules, and assessments",
     badge:"8 Courses",
-    onClick: null,
+    onClick: () => navigate("/department/bca/Syllabus"),
   },
 ];
   const quickActions = [

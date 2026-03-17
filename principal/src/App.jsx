@@ -15,10 +15,13 @@ import Administration from "./Principal/pages/Administration";
 import Notifications from "./Principal/pages/Notifications";
 import Rollpage from "./Principal/pages/rolepage";
 import AdminLogin from "./Principal/pages/Principallogin";
-import BCAStudents from "./Principal/pages/std";  // adjust path
+import BCAStudents from "./Principal/pages/std"; 
+import BCAfaculty from "./Principal/pages/Facultybca.jsx"; 
+import BCAsyllabus from "./Principal/pages/SyllabusBCA.jsx";
 
 /* BCA Department */                                          
 import BCADepartment from "./Principal/pages/bca";           // ✅ ADDED
+import Bca from "./Principal/pages/bca.jsx";
 
 /* HOD pages */
 import HODLogin from "./HOD/pages/HODlogin";
@@ -79,6 +82,22 @@ const App = () => {
         <Route path="/administration"        element={<Administration />} />
         <Route path="/notifications"         element={<Notifications />} />
         <Route path="/department/bca/students" element={<BCAStudentsWrapper />} />
+        <Route path="/department/bca/faculty" element={<BCAfaculty />} />
+        <Route path="/department/bca/Syllabus" element={<BCAsyllabus />} />
+
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/principal" element={<PrincipalDashboard />} />
+        <Route path="/messages" element={<Messages />} />
+        <Route path="/departments" element={<Departments />} />
+        <Route path="/committee-management" element={<CommitteeManagement />} />
+        <Route path="/faculty-management" element={<FacultyManagement />} />
+        <Route path="/student-affairs" element={<StudentAffairs />} />
+        <Route path="/academic-planning" element={<AcademicPlanning />} />
+        <Route path="/reports-analytics" element={<ReportsAnalytics />} />
+        <Route path="/approval-center" element={<ApprovalCenter />} />
+        <Route path="/administration" element={<Administration />} />
+        <Route path="/notifications" element={<Notifications />} />
+        <Route path="/department/bca" element={<Bca />} />
 
         {/* HOD */}
         <Route path="/hod"                   element={<HODLogin />} />

@@ -14,9 +14,9 @@ const Sidebar = () => {
   const toggleProfileDropdown = () => setProfileOpen((prev) => !prev);
 
   return (
-    <aside className="w-72 bg-white min-h-screen shadow-sm flex flex-col px-6 pt-6 pb-4 text-gray-900">
+    <aside className="w-70 bg-white min-h-screen shadow-sm flex flex-col px-6 pt-6 pb-4 text-gray-900">
       {/* ===== PROFILE HEADER ===== */}
-      <div className="relative bg-blue-50 py-10 px-6 -mx-6 -mt-6  flex flex-col items-center shadow-sm rounded-b-lg">
+      <div className="relative bg-blue-50 py-5 px-6 -mx-6 -mt-6  flex flex-col items-center shadow-sm rounded-b-lg">
         <div className="relative">
           <img
             src="/principal.jpg" // Replace with your image path
@@ -60,7 +60,7 @@ const Sidebar = () => {
           <p className="text-xs ">Education: Ph.D. in Educational Administration</p>
       </div>
       {/* QUICK ACTIONS */}
-      <div className="mt-7">
+      <div className="mt-5">
         <h3 className="font-semibold text-base mb-4">Quick Actions</h3>
 
         <button className="flex items-center gap-3 w-full border border-gray-300 rounded-md px-4 py-2 text-sm font-normal text-gray-900 hover:bg-gray-50 mb-3 transition">
