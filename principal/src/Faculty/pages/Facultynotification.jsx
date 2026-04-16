@@ -27,8 +27,8 @@ export default function FacultyNotifications() {
 
   return (
     <div className="flex h-screen bg-gray-100 overflow-hidden">
-      <aside className="w-60 bg-white flex flex-col shrink-0 overflow-y-auto">
-        <div className="bg-linear-to-br from-violet-600 to-indigo-600 px-5 py-6 flex flex-col gap-2.5">
+      <aside className="w-60 bg-white flex flex-col flex-shrink-0 overflow-y-auto">
+        <div className="bg-gradient-to-br from-violet-600 to-indigo-600 px-5 py-6 flex flex-col gap-2.5">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-white/20 border-2 border-white/40 flex items-center justify-center text-white text-xl font-bold">F</div>
             <div><div className="text-white text-sm font-semibold">Faculty Member</div><div className="text-white/80 text-xs">Faculty</div></div>
@@ -36,27 +36,27 @@ export default function FacultyNotifications() {
           <div className="bg-white/20 rounded-md px-2.5 py-0.5 text-white text-xs font-semibold w-fit">FAC001</div>
         </div>
         <div className="px-5 pt-5">
-          <div className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Contact Information</div>
-          <div className="flex items-start gap-2.5 mb-3 text-gray-600 text-sm"><svg className="text-gray-400 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>faculty@college.edu</div>
-          <div className="flex items-start gap-2.5 mb-3 text-gray-600 text-sm"><svg className="text-gray-400 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>+91 98765 43210</div>
-          <div className="flex items-start gap-2.5 mb-3 text-gray-600 text-sm"><svg className="text-gray-400 shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Faculty Block</div>
-        </div>
-        <div className="px-5 pt-4">
-          <div className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Academic Details</div>
+          <div className="text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">Contact Information</div>
+          <div className="flex items-start gap-2.5 mb-3 text-gray-600 text-sm"><svg className="text-gray-400 flex-shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>faculty@college.edu</div>
+          <div className="flex items-start gap-2.5 mb-3 text-gray-600 text-sm"><svg className="text-gray-400 flex-shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>+91 98765 43210</div>
+          <div className="flex items-start gap-2.5 mb-3 text-gray-600 text-sm"><svg className="text-gray-400 flex-shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Faculty Block</div>
+<div className="px-5 pt-4">
+  </div>
+          <div className="text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">Academic Details</div>
           {[{label:"Academic Department",value:"Department"},{label:"Subject Area",value:"Subject Area"},{label:"Academic Qualification",value:"Qualification"}].map(i=>(
-            <div key={i.label} className="flex flex-col mb-3.5"><span className="text-xs text-gray-400">{i.label}</span><span className="text-sm font-semibold text-gray-900">{i.value}</span></div>
+            <div key={i.label} className="flex flex-col mb-3.5"><span className="text-xs font-bold text-gray-900">{i.label}</span><span className="text-sm font-semibold text-gray-400">{i.value}</span></div>
           ))}
         </div>
         <div className="px-5 pt-4 pb-6">
-          <div className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Professional Info</div>
+          <div className="text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">Professional Info</div>
           {[{label:"Employee ID:",value:"EMP00000"},{label:"Experience:",value:"Teaching Experience"},{label:"Specialization:",value:"Area of Specialization"}].map(i=>(
-            <div key={i.label} className="flex flex-col mb-3.5"><span className="text-xs text-gray-400">{i.label}</span><span className="text-sm font-semibold text-gray-900">{i.value}</span></div>
+            <div key={i.label} className="flex flex-col mb-3.5"><span className="text-xs font-bold text-gray-900">{i.label}</span><span className="text-sm font-semibold text-gray-400">{i.value}</span></div>
           ))}
         </div>
       </aside>
 
       <div className="flex-1 flex flex-col overflow-hidden">
-        <div className="flex items-center justify-between bg-white px-7 h-16 border-b border-gray-200 shrink-0">
+        <div className="flex items-center justify-between bg-white px-7 h-16 border-b border-gray-200 flex-shrink-0">
           <div className="flex items-center gap-4">
             <button onClick={() => navigate("/dashboard/faculty")} className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-violet-600 bg-transparent border-none cursor-pointer">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6"/></svg>Back
